@@ -6,6 +6,8 @@ import {
   MAM_CUNG_REGION_NOTES,
   MAM_CUNG_STEPS,
 } from '@/lib/mamCung'
+import { InfoCard } from './InfoCard'
+import { IconSteps } from './icons'
 
 type Region = 'bac' | 'trung' | 'nam'
 
@@ -232,16 +234,18 @@ export function SoDoMamCung({ variant = 'standard' }: { variant?: string }) {
         </div>
       </div>
 
-      <div className="mt-5 paper-panel rounded-lg px-5 py-4">
-        <p className="text-base font-serif text-stone-900 mb-2.5">
-          Trình tự hành lễ
-        </p>
+      <InfoCard
+        icon={<IconSteps className="w-4 h-4" />}
+        title="Trình tự hành lễ"
+        accent="ink"
+        className="mt-5"
+      >
         <ol className="list-decimal pl-5 text-sm text-stone-700 leading-loose">
           {MAM_CUNG_STEPS.map((s, i) => (
             <li key={i}>{s}</li>
           ))}
         </ol>
-      </div>
+      </InfoCard>
     </div>
   )
 }

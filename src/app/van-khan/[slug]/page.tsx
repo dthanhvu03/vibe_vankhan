@@ -9,6 +9,7 @@ import { PrintButton } from '@/components/PrintButton'
 import { PersonalizeProvider } from '@/components/PersonalizeProvider'
 import { PersonalizeForm } from '@/components/PersonalizeForm'
 import { SoDoMamCung } from '@/components/SoDoMamCung'
+import { InfoCard } from '@/components/InfoCard'
 import { SealMark } from '@/components/ornaments'
 import { AltarPanel } from '@/components/AltarPanel'
 import { IconCheck, IconWarning } from '@/components/icons'
@@ -86,24 +87,22 @@ const mdxComponents = {
     return <VanKhanBlock text={text} title={props.title} />
   },
   KiengKy: (props: { children: React.ReactNode }) => (
-    <aside className="bg-vermilion-100 border-l-4 border-vermilion-500 p-4 my-6 rounded-r-lg flex gap-3">
-      <IconWarning className="w-5 h-5 text-vermilion-700 flex-shrink-0 mt-1" />
-      <div>
-        <strong className="text-vermilion-700 block mb-1">
-          Kiêng kỵ &amp; lưu ý
-        </strong>
-        <div className="text-stone-700">{props.children}</div>
-      </div>
-    </aside>
+    <InfoCard
+      icon={<IconWarning className="w-4 h-4" />}
+      title="Kiêng kỵ & lưu ý"
+      accent="vermilion"
+    >
+      {props.children}
+    </InfoCard>
   ),
   Checklist: (props: { children: React.ReactNode }) => (
-    <div className="bg-ink-50 border border-ink-200 rounded-lg p-6 my-6">
-      <div className="flex items-center gap-2 mb-3">
-        <IconCheck className="w-5 h-5 text-ink-600" />
-        <strong className="text-ink-800">Chuẩn bị</strong>
-      </div>
+    <InfoCard
+      icon={<IconCheck className="w-4 h-4" />}
+      title="Chuẩn bị"
+      accent="ochre"
+    >
       {props.children}
-    </div>
+    </InfoCard>
   ),
   SoDoMamCung: (props: { variant?: string }) => (
     <SoDoMamCung variant={props.variant} />

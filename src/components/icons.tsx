@@ -174,3 +174,15 @@ export function IconLock(props: IconProps) {
     </svg>
   )
 }
+
+export function IconSteps(props: IconProps) {
+  return (
+    <svg {...baseProps} {...props}>
+      <line x1="10" y1="6" x2="21" y2="6" />
+      <line x1="10" y1="12" x2="21" y2="12" />
+      <line x1="10" y1="18" x2="21" y2="18" />
+      <path d="M4 5h1.5v3.5" />
+      <path d="M3.5 16.5h2.5M4 14.5c1-.6 2 .2 1.6 1.2" />
+    </svg>
+  )
+}

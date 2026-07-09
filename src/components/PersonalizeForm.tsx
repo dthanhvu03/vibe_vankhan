@@ -1,6 +1,7 @@
 'use client'
 
 import { usePersonalize } from './PersonalizeProvider'
+import { InfoCard } from './InfoCard'
 import { IconCalendar, IconLock, IconUser } from './icons'
 
 const inputClass =
@@ -13,13 +14,12 @@ export function PersonalizeForm() {
   const { ten, diaChi, lunar, setTen, setDiaChi } = usePersonalize()
 
   return (
-    <div className="no-print bg-ink-50 border border-ink-200 rounded-xl p-5 my-8">
-      <div className="flex items-center gap-2 mb-1">
-        <IconUser className="w-5 h-5 text-ink-600" />
-        <span className="font-semibold text-ink-800">
-          Bản khấn của gia đình bạn
-        </span>
-      </div>
+    <InfoCard
+      icon={<IconUser className="w-4 h-4" />}
+      title="Bản khấn của gia đình bạn"
+      accent="ink"
+      className="no-print"
+    >
       <p className="text-sm text-stone-600 mb-4">
         Điền thông tin, bài khấn bên dưới sẽ tự hoàn chỉnh để bạn sao chép hoặc
         in ra.
@@ -57,7 +57,7 @@ export function PersonalizeForm() {
       />
 
       {lunar && (
-        <div className="mt-4 pt-4 border-t border-ink-200">
+        <div className="mt-4 pt-4 border-t border-stone-200">
           <div className="flex items-start gap-2">
             <IconCalendar className="w-4 h-4 text-ink-600 flex-shrink-0 mt-0.5" />
             <p className="text-sm text-stone-700">
@@ -78,6 +78,6 @@ export function PersonalizeForm() {
         <IconLock className="w-3.5 h-3.5 flex-shrink-0" />
         Thông tin chỉ lưu trên máy của bạn, không gửi đi đâu.
       </p>
-    </div>
+    </InfoCard>
   )
 }
