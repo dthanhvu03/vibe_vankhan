@@ -208,26 +208,26 @@
 }
 
 @keyframes vk-willow-sway {
-  0%, 100% { transform: rotate(-1.1deg); }
-  50% { transform: rotate(1.1deg); }
+  0%, 100% { transform: rotate(-2.4deg); }
+  50% { transform: rotate(2.4deg); }
 }
 @keyframes vk-bamboo-sway {
-  0%, 100% { transform: rotate(-0.5deg); }
-  50% { transform: rotate(0.5deg); }
+  0%, 100% { transform: rotate(-1.2deg); }
+  50% { transform: rotate(1.2deg); }
 }
 @keyframes vk-leaf-fall {
   0% { transform: translateY(-24px) translateX(0) rotate(0deg); opacity: 0; }
-  12% { opacity: 0.5; }
-  85% { opacity: 0.4; }
-  100% { transform: translateY(86vh) translateX(26px) rotate(160deg); opacity: 0; }
+  12% { opacity: 0.6; }
+  85% { opacity: 0.45; }
+  100% { transform: translateY(86vh) translateX(28px) rotate(170deg); opacity: 0; }
 }
 .vk-sway-willow {
   transform-origin: top center;
-  animation: vk-willow-sway 8.5s ease-in-out infinite;
+  animation: vk-willow-sway 7s ease-in-out infinite;
 }
 .vk-sway-bamboo {
   transform-origin: bottom center;
-  animation: vk-bamboo-sway 6.5s ease-in-out infinite;
+  animation: vk-bamboo-sway 5.5s ease-in-out infinite;
 }
 .vk-leaf {
   position: absolute;

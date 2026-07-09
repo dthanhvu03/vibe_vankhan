@@ -176,13 +176,13 @@ export function BackgroundDecor() {
       </div>
 
       <div className="hidden lg:block absolute inset-y-0 left-0 w-[110px]">
-        <FallingLeaf left={14} duration={15} delay={0} />
-        <FallingLeaf left={52} duration={19} delay={6} size={12} />
-        <FallingLeaf left={82} duration={17} delay={11} />
+        <FallingLeaf left={14} duration={13} delay={0} />
+        <FallingLeaf left={52} duration={16} delay={3} size={12} />
+        <FallingLeaf left={82} duration={14} delay={6.5} />
       </div>
       <div className="hidden lg:block absolute inset-y-0 right-0 w-[110px]">
-        <FallingLeaf right={20} duration={18} delay={3} />
-        <FallingLeaf right={60} duration={16} delay={9} size={12} />
+        <FallingLeaf right={20} duration={15} delay={1.5} />
+        <FallingLeaf right={60} duration={14} delay={5} size={12} />
       </div>
     </div>
   )
