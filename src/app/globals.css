@@ -207,6 +207,42 @@
   .vk-item { transition: none; }
 }
 
+@keyframes vk-willow-sway {
+  0%, 100% { transform: rotate(-1.1deg); }
+  50% { transform: rotate(1.1deg); }
+}
+@keyframes vk-bamboo-sway {
+  0%, 100% { transform: rotate(-0.5deg); }
+  50% { transform: rotate(0.5deg); }
+}
+@keyframes vk-leaf-fall {
+  0% { transform: translateY(-24px) translateX(0) rotate(0deg); opacity: 0; }
+  12% { opacity: 0.5; }
+  85% { opacity: 0.4; }
+  100% { transform: translateY(86vh) translateX(26px) rotate(160deg); opacity: 0; }
+}
+.vk-sway-willow {
+  transform-origin: top center;
+  animation: vk-willow-sway 8.5s ease-in-out infinite;
+}
+.vk-sway-bamboo {
+  transform-origin: bottom center;
+  animation: vk-bamboo-sway 6.5s ease-in-out infinite;
+}
+.vk-leaf {
+  position: absolute;
+  top: 0;
+  will-change: transform, opacity;
+  opacity: 0;
+  animation-name: vk-leaf-fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .vk-sway-willow, .vk-sway-bamboo { animation: none; }
+  .vk-leaf { animation: none; display: none; }
+}
+
 @media print {
   .no-print {
     display: none !important;

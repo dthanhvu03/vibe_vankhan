@@ -129,17 +129,60 @@ function BambooRight() {
   )
 }
 
+function FallingLeaf({
+  left,
+  right,
+  duration,
+  delay,
+  size = 15,
+}: {
+  left?: number
+  right?: number
+  duration: number
+  delay: number
+  size?: number
+}) {
+  return (
+    <svg
+      className="vk-leaf"
+      viewBox="0 0 20 20"
+      width={size}
+      height={size}
+      style={{
+        left: left !== undefined ? `${left}px` : undefined,
+        right: right !== undefined ? `${right}px` : undefined,
+        animationDuration: `${duration}s`,
+        animationDelay: `${delay}s`,
+      }}
+      aria-hidden="true"
+    >
+      <path d="M10 2 Q17 9 10 18 Q3 9 10 2 Z" fill="#6E8049" />
+      <path d="M10 4 V16" stroke="#3E4C2E" strokeWidth="0.7" fill="none" />
+    </svg>
+  )
+}
+
 export function BackgroundDecor() {
   return (
     <div
       aria-hidden="true"
       className="pointer-events-none fixed inset-0 -z-10 overflow-hidden"
     >
-      <div className="hidden lg:block absolute inset-y-0 left-0 w-[200px] xl:w-[260px] opacity-[0.4]">
+      <div className="vk-sway-willow hidden lg:block absolute inset-y-0 left-0 w-[200px] xl:w-[260px] opacity-[0.4]">
         <WillowLeft />
       </div>
-      <div className="hidden lg:block absolute inset-y-0 right-0 w-[180px] xl:w-[230px] opacity-[0.45]">
+      <div className="vk-sway-bamboo hidden lg:block absolute inset-y-0 right-0 w-[180px] xl:w-[230px] opacity-[0.45]">
         <BambooRight />
+      </div>
+
+      <div className="hidden lg:block absolute inset-y-0 left-0 w-[110px]">
+        <FallingLeaf left={14} duration={15} delay={0} />
+        <FallingLeaf left={52} duration={19} delay={6} size={12} />
+        <FallingLeaf left={82} duration={17} delay={11} />
+      </div>
+      <div className="hidden lg:block absolute inset-y-0 right-0 w-[110px]">
+        <FallingLeaf right={20} duration={18} delay={3} />
+        <FallingLeaf right={60} duration={16} delay={9} size={12} />
       </div>
     </div>
   )
