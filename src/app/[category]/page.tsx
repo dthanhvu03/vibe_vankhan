@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { AltarPanel } from '@/components/AltarPanel'
+import { VanKhanCard } from '@/components/VanKhanCard'
 import {
   CATEGORY_META,
   getVanKhanByCategory,
@@ -86,20 +87,7 @@ export default function CategoryPage({ params }: Props) {
           ) : (
             <div className="grid gap-4 md:grid-cols-2">
               {entries.map((entry) => (
-                <Link
-                  key={entry.frontmatter.slug}
-                  href={`/van-khan/${entry.frontmatter.slug}`}
-                  className="cat-card"
-                >
-                  <h2 className="font-serif text-lg font-medium text-stone-900 mb-1.5">
-                    {entry.frontmatter.title}
-                  </h2>
-                  {entry.frontmatter.description && (
-                    <p className="text-sm text-stone-600 line-clamp-3 leading-snug">
-                      {entry.frontmatter.description}
-                    </p>
-                  )}
-                </Link>
+                <VanKhanCard key={entry.frontmatter.slug} entry={entry} />
               ))}
             </div>
           )}

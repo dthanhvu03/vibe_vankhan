@@ -11,6 +11,7 @@ import {
 import { OrnamentLotus } from '@/components/ornaments'
 import { AltarPanel } from '@/components/AltarPanel'
 import { HomToday } from '@/components/HomToday'
+import { VanKhanCard } from '@/components/VanKhanCard'
 import { getAllVanKhan, CATEGORY_META, type Category } from '@/lib/content'
 
 const SITE_URL = 'https://vankhanviet.com'
@@ -149,20 +150,11 @@ export default function HomePage() {
             </div>
             <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
               {featured.map((entry) => (
-                <Link
+                <VanKhanCard
                   key={entry.frontmatter.slug}
-                  href={`/van-khan/${entry.frontmatter.slug}`}
-                  className="cat-card"
-                >
-                  <h3 className="font-serif text-lg font-medium text-stone-900 mb-1.5">
-                    {entry.frontmatter.title}
-                  </h3>
-                  {entry.frontmatter.description && (
-                    <p className="text-sm text-stone-600 line-clamp-2 leading-snug">
-                      {entry.frontmatter.description}
-                    </p>
-                  )}
-                </Link>
+                  entry={entry}
+                  showCategory
+                />
               ))}
             </div>
           </section>
