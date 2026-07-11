@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next'
 import { getAllVanKhan, CATEGORY_META } from '@/lib/content'
 
-const SITE = 'https://vankhanviet.com'
+const SITE = 'https://coi-viet.vercel.app'
 
 function parseReviewDate(raw: string | undefined, fallback: Date): Date {
   if (!raw) return fallback

@@ -18,7 +18,7 @@ const lora = Lora({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://vankhanviet.com'),
+  metadataBase: new URL('https://coi-viet.vercel.app'),
   title: {
     default: 'Cội Việt — Văn khấn và phong tục cúng lễ Việt Nam',
     template: '%s | Cội Việt',

@@ -14,7 +14,7 @@ import { HomToday } from '@/components/HomToday'
 import { VanKhanCard } from '@/components/VanKhanCard'
 import { getAllVanKhan, CATEGORY_META, type Category } from '@/lib/content'
 
-const SITE_URL = 'https://vankhanviet.com'
+const SITE_URL = 'https://coi-viet.vercel.app'
 
 const CATEGORY_ICONS: Record<
   Category,

@@ -19,7 +19,7 @@ import {
   CATEGORY_META,
 } from '@/lib/content'
 
-const SITE_URL = 'https://vankhanviet.com'
+const SITE_URL = 'https://coi-viet.vercel.app'
 
 export function generateStaticParams() {
   return getAllVanKhanSlugs().map((slug) => ({ slug }))
