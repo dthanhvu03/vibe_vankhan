@@ -162,12 +162,41 @@ function FallingLeaf({
   )
 }
 
+function BambooSprig() {
+  return (
+    <svg
+      viewBox="0 0 100 130"
+      preserveAspectRatio="xMidYMax meet"
+      className="h-full w-full"
+      aria-hidden="true"
+    >
+      <rect x="46" y="34" width="7" height="96" rx="3.5" fill="#5E6E42" />
+      <rect x="44" y="66" width="11" height="3" rx="1.5" fill="#3B472A" />
+      <rect x="44" y="98" width="11" height="3" rx="1.5" fill="#3B472A" />
+      <rect x="68" y="60" width="6" height="70" rx="3" fill="#6E7A4F" />
+      <g fill="#5B6B44">
+        <path d="M49 40 Q 62 30 84 22 Q 64 34 49 44 Z" />
+        <path d="M49 40 Q 60 26 76 12 Q 58 28 49 42 Z" />
+        <path d="M49 40 Q 44 26 34 14 Q 46 30 49 44 Z" transform="translate(0 2)" />
+        <path d="M71 64 Q 84 56 96 46 Q 78 60 71 68 Z" />
+      </g>
+    </svg>
+  )
+}
+
 export function BackgroundDecor() {
   return (
     <div
       aria-hidden="true"
       className="pointer-events-none fixed inset-0 -z-10 overflow-hidden"
     >
+      <div className="lg:hidden absolute bottom-0 left-0 w-[90px] h-[120px] opacity-[0.22]">
+        <BambooSprig />
+      </div>
+      <div className="lg:hidden absolute bottom-0 right-0 w-[90px] h-[120px] opacity-[0.24] -scale-x-100">
+        <BambooSprig />
+      </div>
+
       <div className="vk-sway-willow hidden lg:block absolute inset-y-0 left-0 w-[200px] xl:w-[260px] opacity-[0.4]">
         <WillowLeft />
       </div>

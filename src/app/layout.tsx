@@ -39,6 +39,9 @@ export const metadata: Metadata = {
     locale: 'vi_VN',
     siteName: 'Cội Việt',
   },
+  twitter: {
+    card: 'summary_large_image',
+  },
   robots: {
     index: true,
     follow: true,
