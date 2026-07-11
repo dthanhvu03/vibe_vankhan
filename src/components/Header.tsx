@@ -32,7 +32,7 @@ export function Header() {
         >
           <SealMark className="w-8 h-8" />
           <span className="font-serif text-2xl font-semibold text-ink-800">
-            Văn Khấn Việt
+            Cội Việt
           </span>
         </Link>
 

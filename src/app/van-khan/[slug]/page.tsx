@@ -167,10 +167,10 @@ export default function VanKhanPage({ params }: Props) {
         url: pageUrl,
         datePublished: reviewIso,
         dateModified: reviewIso,
-        author: { '@type': 'Organization', name: 'Văn Khấn Việt' },
+        author: { '@type': 'Organization', name: 'Cội Việt' },
         publisher: {
           '@type': 'Organization',
-          name: 'Văn Khấn Việt',
+          name: 'Cội Việt',
           url: SITE_URL,
         },
         mainEntityOfPage: { '@type': 'WebPage', '@id': pageUrl },

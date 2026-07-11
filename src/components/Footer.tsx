@@ -14,7 +14,7 @@ export function Footer() {
         <div className="flex items-center justify-center gap-2.5 mb-3">
           <SealMark className="w-7 h-7" />
           <p className="font-serif text-xl font-medium text-ink-800">
-            Văn Khấn Việt
+            Cội Việt
           </p>
         </div>
 
@@ -28,7 +28,7 @@ export function Footer() {
         </p>
 
         <p className="text-xs tracking-wide text-ink-700">
-          © 2026 Văn Khấn Việt
+          © 2026 Cội Việt
         </p>
       </div>
     </footer>

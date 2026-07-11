@@ -20,8 +20,8 @@ const lora = Lora({
 export const metadata: Metadata = {
   metadataBase: new URL('https://vankhanviet.com'),
   title: {
-    default: 'Văn Khấn Việt — Thư viện văn khấn và phong tục cúng lễ',
-    template: '%s | Văn Khấn Việt',
+    default: 'Cội Việt — Văn khấn và phong tục cúng lễ Việt Nam',
+    template: '%s | Cội Việt',
   },
   description:
     'Thư viện văn khấn Việt Nam chuẩn theo sách cổ. Đầy đủ mùng 1, rằm, giao thừa, nhập trạch, đầy tháng, cưới hỏi. Miễn phí, không quảng cáo.',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'vi_VN',
-    siteName: 'Văn Khấn Việt',
+    siteName: 'Cội Việt',
   },
   robots: {
     index: true,

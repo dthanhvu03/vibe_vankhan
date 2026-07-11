@@ -48,7 +48,7 @@ export default function HomePage() {
     '@graph': [
       {
         '@type': 'WebSite',
-        name: 'Văn Khấn Việt',
+        name: 'Cội Việt',
         url: SITE_URL,
         inLanguage: 'vi-VN',
         potentialAction: {
@@ -59,7 +59,7 @@ export default function HomePage() {
       },
       {
         '@type': 'Organization',
-        name: 'Văn Khấn Việt',
+        name: 'Cội Việt',
         url: SITE_URL,
         description:
           'Thư viện văn khấn Việt Nam chuẩn theo sách cổ. Miễn phí, không quảng cáo.',
