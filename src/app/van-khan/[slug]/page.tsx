@@ -79,13 +79,6 @@ const mdxComponents = {
   strong: (props: React.HTMLAttributes<HTMLElement>) => (
     <strong className="font-semibold text-stone-900" {...props} />
   ),
-  VanKhanText: (props: { children: React.ReactNode; title?: string }) => {
-    const text =
-      typeof props.children === 'string'
-        ? props.children
-        : String(props.children ?? '')
-    return <VanKhanBlock text={text} title={props.title} />
-  },
   KiengKy: (props: { children: React.ReactNode }) => (
     <InfoCard
       icon={<IconWarning className="w-4 h-4" />}
@@ -152,6 +145,15 @@ export default function VanKhanPage({ params }: Props) {
   const { frontmatter, content } = entry
   const categoryMeta = CATEGORY_META[frontmatter.category]
   const faqs = extractFaqs(content)
+
+  const components = {
+    ...mdxComponents,
+    VanKhanText: (props: { index?: string }) => {
+      const vk = frontmatter.vanKhan?.[Number(props.index ?? 0)]
+      if (!vk) return null
+      return <VanKhanBlock text={vk.text} title={vk.title} />
+    },
+  }
   const reviewIso = parseVietnameseDate(frontmatter.lastReviewed)
   const pageUrl = `${SITE_URL}/van-khan/${frontmatter.slug}`
 
@@ -270,7 +272,7 @@ export default function VanKhanPage({ params }: Props) {
           <PersonalizeForm />
 
           <div className="prose prose-stone max-w-none">
-            <MDXRemote source={content} components={mdxComponents} />
+            <MDXRemote source={content} components={components} />
           </div>
         </PersonalizeProvider>
 

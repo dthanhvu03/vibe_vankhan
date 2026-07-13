@@ -19,6 +19,7 @@ export interface VanKhanFrontmatter {
   sources: string[]
   lastReviewed?: string
   reviewer?: string
+  vanKhan?: Array<{ title: string; text: string }>
 }
 
 export interface VanKhanEntry {
